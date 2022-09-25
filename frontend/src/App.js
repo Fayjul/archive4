@@ -15,12 +15,10 @@ import axios from 'axios';
 import ProtectedRoute from './components/ProtectedRoute';
 import SigninScreen from './screens/SigninScreen';
 import SignupScreen from './screens/SignupScreen';
-import AdminRoute from './components/AdminRoute';
-import UserEditScreen from './screens/UserEditScreen';
+import UserListScreen from './screens/UserListScreen';
 import './App.css';
 import FormComponent from './components/FormComponents';
 import PapersScreen from './screens/PapersScreen';
-import ResearcherList from './screens/ResearcherList';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -151,7 +149,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path="/resercher_profile" element={<ResearcherList />} />
+              <Route path="/resercher_profile" element={<UserListScreen />} />
               <Route path="/uploadpaper" element={<FormComponent />} />
               <Route path="/papers" element={<PapersScreen />} />
               <Route path="/" element={<HomeScreen />} />
